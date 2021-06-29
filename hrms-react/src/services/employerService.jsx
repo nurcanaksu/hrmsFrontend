@@ -7,4 +7,4 @@ export default class EmployerService
       return axios.get("http://localhost:9090/api/employers/getAll")
   }
 
-}
+} 
