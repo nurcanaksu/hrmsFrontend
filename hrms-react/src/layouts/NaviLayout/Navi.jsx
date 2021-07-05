@@ -1,19 +1,34 @@
 import React from "react";
-import { Button, Container, Menu } from "semantic-ui-react";
-import { Icon } from "semantic-ui-react";
+import { Button, Icon, Menu } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+
 export default function Navi() {
   return (
     <div>
-      <Menu inverted fixed="top">
+      <Menu inverted fixed="top" size="large">
         <Container>
-          <Icon.Group size="huge">
-            <Icon loading size="small" name="circle notch" />
-            <Icon name="user" />
-          </Icon.Group>
-          <Menu.Item hospital symbol name="HRMS" />
-          <Menu.Item name="Home" />
-          <Menu.Item name="JobPosting" />
-          <Menu.Item name="Corporation" />
+          <Link to="/jobPostings">
+            <Menu.Item name="building outline">
+              <Icon name="building outline" size="large" />
+              HRMS
+            </Menu.Item>
+          </Link>
+          <Link to="/jobPostings">
+            <Menu.Item name="Job Postings" />
+          </Link>
+          <Link to="/candidates">
+            <Menu.Item name="Candidates" />
+          </Link>
+          <Link to="/employers">
+            <Menu.Item name="Employers" />
+          </Link>
+          <Link to="/employees">
+            <Menu.Item name="Employees" />
+          </Link>
+          <Link to="/resumes">
+            <Menu.Item name="Resumes" />
+          </Link>
 
           <Menu.Menu position="right">
             <Menu.Item>
