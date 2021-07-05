@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-  padding: 20px 60px;
+  padding: 20px 20px;
   background: black;
   position: fixed;
   bottom: 0;
@@ -18,7 +18,6 @@ export const Container = styled.div`
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
-  /* background: red; */
 `;
 
 export const Column = styled.div`
@@ -40,7 +39,7 @@ export const Row = styled.div`
 
 export const FooterLink = styled.a`
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-size: 12px;
   text-decoration: none;
 
