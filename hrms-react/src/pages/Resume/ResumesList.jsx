@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button, Header, Icon } from "semantic-ui-react";
 import ResumeService from "../../services/resumeService";
+import { Link } from "react-router-dom";
 
 export default function ResumesList() {
   const [resumes, setResumes] = useState([]);
@@ -37,7 +38,7 @@ export default function ResumesList() {
               <Table.Cell>{resume.candidate.nationalityId}</Table.Cell>
               <Table.Cell>{resume.candidate.birthDate}</Table.Cell>
               <Table.Cell>
-                <Button>View</Button>
+                <Button as={Link} to={`/resumes/${resume.id}`}>View</Button>
               </Table.Cell>
             </Table.Row>
           ))}
